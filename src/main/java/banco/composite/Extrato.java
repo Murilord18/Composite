@@ -30,7 +30,7 @@ public class Extrato extends Item {
     @Override
     public double getValor() {
         return itens.stream().mapToDouble(Item::getValor).sum();
-    } {
+    } 
 
 
 }
