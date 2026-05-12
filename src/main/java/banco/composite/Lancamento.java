@@ -11,10 +11,12 @@ public class Lancamento extends Item {
         this.valor = valor;
     }
 
+
     @Override
     public String getDescricao() {
         String tipo = valor >= 0 ? "Crédito" : "Débito";
-        return String.format("Lançamento: %s - %s: R$ %.2f", descricao, tipo, Math.abs(valor));
+        return String.format("Lançamento: %s - %s: R$ %.2f\n", descricao, tipo, Math.abs(valor));
+
     }
 
     @Override

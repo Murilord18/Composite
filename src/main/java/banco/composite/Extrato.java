@@ -22,7 +22,7 @@ public class Extrato extends Item {
         StringBuilder sb = new StringBuilder();
         sb.append("Extrato: ").append(nome).append("\n");
         for (Item item : itens) {
-            sb.append(item.getDescricao()).append("\n");
+            sb.append(item.getDescricao()); // cada item já traz seu próprio \n
         }
         return sb.toString();
     }
@@ -30,7 +30,7 @@ public class Extrato extends Item {
     @Override
     public double getValor() {
         return itens.stream().mapToDouble(Item::getValor).sum();
-    } 
+    }
 
 
 }
